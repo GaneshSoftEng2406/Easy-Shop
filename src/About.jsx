@@ -10,7 +10,6 @@ const About = () => {
 
   };
 
-  
   return( 
     <> 
     {myName}
