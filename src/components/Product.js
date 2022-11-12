@@ -23,3 +23,5 @@ const Product = (curElem) => {
 };
 
 export default Product;
+
+//called from here FeatureProduct 
