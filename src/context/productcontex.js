@@ -42,6 +42,4 @@ const useProductContext = () => {
 };
 
 export { AppProvider, AppContext, useProductContext };
-
-
 //called axios 
