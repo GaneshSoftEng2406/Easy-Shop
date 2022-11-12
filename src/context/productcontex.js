@@ -4,7 +4,7 @@ const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   return (
-    <AppContext.Provider value={{ myName: "Ganesh Aher" }}>
+    <AppContext.Provider value={{ myName:"Ganesh Aher"}}>
       {children}
     </AppContext.Provider>
   );
@@ -16,3 +16,5 @@ const useProductContext = () => {
 };
 
 export { AppProvider, AppContext, useProductContext };
+
+//contex Api 
