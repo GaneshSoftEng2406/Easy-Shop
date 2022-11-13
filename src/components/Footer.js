@@ -170,3 +170,5 @@ const Wrapper = styled.section`
 `;
 
 export default Footer;
+
+// added footer component
