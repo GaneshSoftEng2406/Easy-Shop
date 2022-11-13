@@ -25,3 +25,4 @@ const Wrapper = styled.section`
 `;
 
 export default PageNavigation;
+//page navigation & simple UI of Single Product added
