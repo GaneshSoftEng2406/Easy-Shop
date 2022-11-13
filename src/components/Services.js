@@ -106,3 +106,4 @@ const Wrapper = styled.section`
   }
 `;
 export default Services;
+//added service & trusted section of homepage
