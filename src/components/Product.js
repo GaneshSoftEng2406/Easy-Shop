@@ -24,3 +24,4 @@ const Product = (curElem) => {
 };
 
 export default Product;
+//format the price for indian currency updated
