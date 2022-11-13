@@ -1,21 +1,18 @@
-
 import HeroSection from "./components/HeroSection";
-import {useProductContext} from './context/productcontex'
-
+import { useProductContext } from "./context/productcontex";
 
 const About = () => {
-  const {myName} = useProductContext()
-  const data = {
-    name: "E-Shop",
+  const { myName } = useProductContext();
 
+  const data = {
+    name: "Thapa Ecommerce",
   };
 
-  return( 
-    <> 
-    {myName}
-  <HeroSection myData={data} />
-  {" "}
-  </>
+  return (
+    <>
+      {myName}
+      <HeroSection myData={data} />
+    </>
   );
 };
 
