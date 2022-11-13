@@ -59,4 +59,5 @@ const useProductContext = () => {
 };
 
 export { AppProvider, AppContext, useProductContext };
-// single product page context & UI
+
+// single product page context API & UI
