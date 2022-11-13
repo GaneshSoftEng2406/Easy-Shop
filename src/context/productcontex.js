@@ -59,3 +59,4 @@ const useProductContext = () => {
 };
 
 export { AppProvider, AppContext, useProductContext };
+// single product page context & UI
