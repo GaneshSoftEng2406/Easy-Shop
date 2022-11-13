@@ -83,3 +83,5 @@ const Wrapper = styled.section`
 `;
 
 export default Trusted;
+
+// added service & trusted section of homepage
