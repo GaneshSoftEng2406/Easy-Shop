@@ -7,3 +7,4 @@ const FormatPrice = ({ price }) => {
 };
 
 export default FormatPrice;
+// format the price for indian currency updated
