@@ -182,6 +182,7 @@ const Wrapper = styled.section`
     align-items: center;
   }
 
+  
   .page_loading {
     font-size: 3.2rem;
     display: flex;

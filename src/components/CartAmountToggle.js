@@ -17,4 +17,5 @@ const CartAmountToggle = ({ amount, setDecrease, setIncrease }) => {
   );
 };
 
+
 export default CartAmountToggle;
