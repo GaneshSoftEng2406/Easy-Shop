@@ -116,6 +116,7 @@ const Wrapper = styled.section`
       &:hover a {
         color: #fff;
       }
+
       a {
         color: rgb(98 84 243);
         font-size: 1.4rem;
@@ -125,3 +126,5 @@ const Wrapper = styled.section`
 `;
 
 export default FeatureProduct;
+
+//feature section of homepage added
