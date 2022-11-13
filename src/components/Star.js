@@ -52,3 +52,6 @@ const Wrapper = styled.section`
 `;
 
 export default Star;
+
+//
+// star starings added
