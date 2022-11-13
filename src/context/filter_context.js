@@ -25,13 +25,24 @@ export const FilterContextProvider = ({ children }) => {
     return dispatch({ type: "SET_LIST_VIEW" });
   };
 
+  // sorting function
+  const sorting = (event) =>{
+    let userValue=event.target.value;
+    dispatch({type:"GET_SORT_VALUE",payload:userValue});
+  };
+
+  // Price Filter 
+  useEffect(()=>{
+    dispatch({type:"SORTING_PRODUCTS"});
+  },[state.sorting_value]);
+
   useEffect(() => {
     dispatch({ type: "LOAD_FILTER_PRODUCTS", payload: products });
   }, [products]);
 
   return (
     <FilterContext.Provider
-      value={{ ...state, setGridView, setListView }}>
+      value={{ ...state, setGridView, setListView, sorting }}>
       {children}
     </FilterContext.Provider>
   );
