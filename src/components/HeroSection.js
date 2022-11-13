@@ -85,3 +85,5 @@ const Wrapper = styled.section`
 `;
 
 export default HeroSection;
+
+//added hero section Home and About Page
