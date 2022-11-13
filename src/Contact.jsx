@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Iframe from 'react-iframe';
 
 const Contact = () => {
   const Wrapper = styled.section`
@@ -35,16 +36,22 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <h2 className="common-heading">Contact page</h2>
+      <h3 className="common-heading">Contact Us</h3>
 
      
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7530.505011822962!2d74.16739465943336!3d19.31484628658358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd1e8a57e26503%3A0x8fbcd754c24db3bd!2sGhargaon%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1668210759545!5m2!1sen!2sin"
+ <Iframe 
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7530.505011822962!2d74.16739465943336!3d19.31484628658358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd1e8a57e26503%3A0x8fbcd754c24db3bd!2sGhargaon%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1668210759545!5m2!1sen!2sin"
  width="100%"
-  height="450"
-   style={{border:0}} 
-   referrerPolicy="no-referrer-when-downgrade"></iframe>
+        height="400"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"></Iframe> 
+
+
+   
 
 
       <div className="container">
@@ -86,5 +93,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// contact page 
