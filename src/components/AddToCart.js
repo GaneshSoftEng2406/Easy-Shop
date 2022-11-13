@@ -103,5 +103,6 @@ const Wrapper = styled.section`
       color: ${({ theme }) => theme.colors.btn};
     }
   }
+  
 `;
 export default AddToCart;
