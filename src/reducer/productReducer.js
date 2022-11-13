@@ -66,3 +66,5 @@ const ProductReducer = (state, action) => {
 };
 
 export default ProductReducer;
+
+// single product page context & UI
