@@ -7,6 +7,8 @@ const filterReducer = (state, action) => {
         all_products: [...action.payload],
       };
 
+
+
     case "SET_GRID_VIEW":
       return {
         ...state,
@@ -73,16 +75,44 @@ const filterReducer = (state, action) => {
               };
             case  "FILTER_PRODUCTS":
             let { all_products }=state;
-
             let tempFilterProduct=[...all_products]
-            const {text} = state.filters
+
+            const {text,category,company} = state.filters
+
+
             if(text){
               tempFilterProduct = tempFilterProduct.filter((curElem)=>{
                 return curElem.name.toLowerCase().includes(text);
-
-
               })
             }
+            // if(category !=="all"){
+            //   tempFilterProduct= tempFilterProduct.filter((curElem)=>{
+            //     return curElem.category===category;
+            //   });
+            // }
+
+            // if(company !=="all"){
+            //   tempFilterProduct= tempFilterProduct.filter(
+            //     (curElem)=>{
+            //     return curElem.company.toLowerCase()===company.toLowerCase();
+            //   });
+            // }
+
+            if(category !== "all"){
+              tempFilterProduct= tempFilterProduct.filter(
+                (curElem)=> curElem.category===category
+              );
+            }
+
+            if(company !=="all"){
+              tempFilterProduct= tempFilterProduct.filter(
+                (curElem)=>curElem.company.toLowerCase()===company.toLowerCase()
+              );
+            }
+
+
+
+
             return{
               ...state,
               filter_products:tempFilterProduct,
@@ -94,5 +124,3 @@ const filterReducer = (state, action) => {
 };
 
 export default filterReducer;
-
-//filter search ganesh 
