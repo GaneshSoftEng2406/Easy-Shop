@@ -4,25 +4,33 @@ import { useFilterContext } from "../context/filter_context";
 
 const FilterSection = () => {
   const {
-    filters:{text,category},
-
-    updateFilterValue,
+    filters:{text,category,color},
     all_products,
+    updateFilterValue,
   }= useFilterContext();
 
   // to unique data of each filds
 
-  const getUniqueData = (data,property)=>{
+  const getUniqueData = (data,attr)=>{
     let newVal =data.map((curElem)=>{
-      return curElem[property]
+      return curElem[attr]
     });
-   return (newVal= ["all",...new Set(newVal)])
+    if(attr === "colors"){
+      // return (newVal=["all", ...new Set([].concat(...newVal))]);
+      newVal=newVal.flat();
+    }
+   
+      return (newVal= ["all",...new Set(newVal)])
+    
+  
    }
 
   // WE NEED UNIQUE DATA
   const categoryOnlyData  = getUniqueData(all_products,"category")
-  const companyData  = getUniqueData(all_products,"company")
-
+  const companyData  = getUniqueData(all_products,"company");
+  const colorsData  = getUniqueData(all_products,"colors");
+  
+  
 
   return (
   <Wrapper>
@@ -45,7 +53,8 @@ const FilterSection = () => {
             return<button 
              key={index} 
             type="button"
-             name="category"
+            // id:"category"
+            name="category"
             value={curElem}
             onClick={updateFilterValue}>
               {curElem}
@@ -81,6 +90,29 @@ const FilterSection = () => {
         </select>
       </form>
 
+    </div>
+    <div className="filter-colors colors">
+    <h3>Colors</h3>
+    <div className="filter-color-style">
+    {
+      colorsData.map((curColor,index)=>{
+        return( 
+         <button 
+         key={index}
+         type="button" 
+         value={curColor}
+         name="color"
+         style={{backgroundColor:curColor}} 
+         className="btnStyle"
+         onClick={updateFilterValue}
+        
+        >
+        {color === curColor  ? "" : null }
+        </button>
+        );
+      })
+    }
+    </div>
     </div>
   
     </Wrapper>
