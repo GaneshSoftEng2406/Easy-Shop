@@ -5,8 +5,9 @@ import { useFilterContext } from "../context/filter_context";
 const FilterSection = () => {
   const {
     filters:{text,category},
-    all_products,
+
     updateFilterValue,
+    all_products,
   }= useFilterContext();
 
   // to unique data of each filds
@@ -15,7 +16,7 @@ const FilterSection = () => {
     let newVal =data.map((curElem)=>{
       return curElem[property]
     });
-   return (newVal= ["All",...new Set(newVal)])
+   return (newVal= ["all",...new Set(newVal)])
    }
 
   // WE NEED UNIQUE DATA
