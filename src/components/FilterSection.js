@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
 import { FaCheck } from "react-icons/fa";
+import FormatPrice from "../Helpers/FormatPrice"
 
 const FilterSection = () => {
   const {
-    filters:{text,category,color},
+    filters:{text,category,color,price,maxPrice,minPrice},
     all_products,
     updateFilterValue,
   }= useFilterContext();
@@ -131,6 +132,17 @@ const FilterSection = () => {
       })
     }
     </div>
+    </div>
+    <div className="filter_price">
+    <h3>Price</h3>
+    <p><FormatPrice price={price} /></p>
+    <input 
+    type="range" 
+    name="price"
+    min={minPrice} 
+    max={maxPrice} 
+    value={price}
+    onChange={updateFilterValue} />
     </div>
   
     </Wrapper>
