@@ -47,19 +47,33 @@ export const FilterContextProvider = ({ children }) => {
 
   };
 
-  // Price Filter 
+  // to clear the filter 
+  const clearFilters = () =>{
+    dispatch({type:"CLEAR_FILTERS"})
+  }
+
+  // Price Filter a-z z-a low-high high-low
   useEffect(()=>{
     dispatch({type:"FILTER_PRODUCTS"})
     dispatch({type:"SORTING_PRODUCTS"});
   },[products,state.sorting_value,state.filters]);
 
+ 
+     // to Load all the Products for grid and list view 
   useEffect(() => {
     dispatch({ type: "LOAD_FILTER_PRODUCTS", payload: products });
   }, [products]);
 
   return (
     <FilterContext.Provider
-      value={{ ...state, setGridView, setListView, sorting,updateFilterValue, }}>
+      value={{ 
+        ...state,
+         setGridView,
+          setListView, 
+          sorting,
+          updateFilterValue, 
+          clearFilters,
+        }}>
       {children}
     </FilterContext.Provider>
   );
