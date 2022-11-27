@@ -8,7 +8,7 @@ import { useCartContext } from '../context/cart_context';
 const CartItem = ({id,name,image,color,price,amount}) => {
    const { removeItem} = useCartContext();
     const setDecrease = () => {
-        // amount > 1 ? setAmount(amount - 1) : setAmount(1);
+        //  amount > 1 ? setAmount(amount - 1) : setAmount(1);
       };
     
       const setIncrease = () => {
