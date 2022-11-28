@@ -114,34 +114,55 @@ if(action.type==="SET_INCREMENT"){
       };
 
     }
-    if(action.type==="CART_TOTAL_ITEM"){
-      let updatedItemVal= state.cart.reduce((intialVal,curElem)=>{
-        let {amount}=curElem;
+   //  if(action.type==="CART_TOTAL_ITEM"){
+   //    let updatedItemVal= state.cart.reduce((intialVal,curElem)=>{
+   //      let {amount}=curElem;
 
-        intialVal=intialVal+amount
-        return intialVal
-      },0);
-      return{
-         ...state,
-         total_item:updatedItemVal,
-      };
-    }
+   //      intialVal=intialVal+amount
+   //      return intialVal
+   //    },0);
+   //    return{
+   //       ...state,
+   //       total_item:updatedItemVal,
+   //    };
+   //  }
 
-    if(action.type==="CART_TOTAL_price"){
+   //  if(action.type==="CART_TOTAL_price"){
      
-      let total_price = state.cart.reduce((intialVal,curElem)=>{
-        let  {price,amount}= curElem;
-        intialVal=intialVal+price*amount;
-      //   25000+0=25000
-     // 10199+25000=121
+   //    let total_price = state.cart.reduce((intialVal,curElem)=>{
+   //      let  {price,amount}= curElem;
+   //      intialVal=intialVal+price*amount;
+   //    //   25000+0=25000
+   //   // 10199+25000=121
 
-     return intialVal;
+   //   return intialVal;
         
-      },0)
-      return {
-         ...state,
-         total_price,
+   //    },0)
+   //    return {
+   //       ...state,
+   //       total_price,
+   //      }
+   //  }
+   if (action.type === "CART_ITEM_PRICE_TOTAL") {
+      let { total_item, total_price } = state.cart.reduce(
+        (accum, curElem) => {
+          let { price, amount } = curElem;
+  
+          accum.total_item += amount;
+          accum.total_price += price * amount;
+  
+          return accum;
+        },
+        {
+          total_item: 0,
+          total_price: 0,
         }
+      );
+      return {
+        ...state,
+        total_item,
+        total_price,
+      };
     }
   return state;
  
