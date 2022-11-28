@@ -48,6 +48,50 @@ const cartReducer = (state,action) => {
      };
    }
 }
+// to set the decreament and decreamnt 
+
+if(action.type==="SET_DECREAMENT"){
+   let updatedProduct=state.cart.map((curElem)=>{
+      if(curElem.id===action.payload){
+         let decAmount= curElem.amount - 1;
+        
+         //it is not deacrease bellow zero
+         if(decAmount<=1){
+            decAmount=1
+         }
+         return{
+            ...curElem,
+            amount:decAmount,
+         };
+      }else{
+         return curElem
+      }
+   });
+   return{...state,cart:updatedProduct}
+}
+
+
+
+if(action.type==="SET_INCREMENT"){
+   let updatedProduct=state.cart.map((curElem)=>{
+      if(curElem.id===action.payload){
+         let inAmount= curElem.amount +  1;
+        
+         //it is not go to max product which is 6
+         if(inAmount >= curElem.max){
+            inAmount=curElem.max;
+         }
+         return{
+            ...curElem,
+            amount:inAmount,
+         };
+      }else{
+         return curElem
+      }
+   });
+   return{...state,cart:updatedProduct}
+}
+
  
     
 
