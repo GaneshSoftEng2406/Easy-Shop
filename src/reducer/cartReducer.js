@@ -127,8 +127,23 @@ if(action.type==="SET_INCREMENT"){
       };
     }
 
-    
-     return state;
+    if(action.type==="CART_TOTAL_price"){
+     
+      let total_price = state.cart.reduce((intialVal,curElem)=>{
+        let  {price,amount}= curElem;
+        intialVal=intialVal+price*amount;
+      //   25000+0=25000
+     // 10199+25000=121
+
+     return intialVal;
+        
+      },0)
+      return {
+         ...state,
+         total_price,
+        }
+    }
+  return state;
  
    
  }
