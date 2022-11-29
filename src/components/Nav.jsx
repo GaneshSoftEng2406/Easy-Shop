@@ -74,6 +74,7 @@ const Nav = () => {
         background-color: ${({ theme }) => theme.colors.helper};
       }
     }
+   
 
     .user-login--name {
       text-transform: capitalize;
@@ -207,8 +208,13 @@ const Nav = () => {
             {
               isAuthenticated && (
                 <li>
+              
+                <img src={user.picture} alt={user.name}/>
+                
                 <p>{user.name}</p>
                 </li>
+
+               
 
               ) 
             }
