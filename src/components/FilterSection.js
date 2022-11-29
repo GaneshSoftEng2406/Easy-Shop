@@ -8,7 +8,7 @@ const FilterSection = () => {
   const {
     filters:{
       text,
-      category,
+      // category,
       color,
       price,
       maxPrice,
