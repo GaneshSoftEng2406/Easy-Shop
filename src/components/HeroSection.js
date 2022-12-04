@@ -17,8 +17,10 @@ const HeroSection = ({ myData }) => {
             I'm {name}. Shop the Online Megastore with the free Easy Shop windows phone app. Choose from the massive selection of original products in Fashion, Electronics, Books, ...
           </p>
           <Button className="btn hireme-btn">
-            <NavLink to="/contact"> Show Now </NavLink>
+            <NavLink to="/products"> Show Now </NavLink>
           </Button>
+        
+      
         </div>
 
         {/* for image  */}
