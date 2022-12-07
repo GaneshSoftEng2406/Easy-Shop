@@ -72,7 +72,9 @@ const Footer = () => {
           {/* 4th column  */}
           <div className="footer-contact">
             <h3>Call Us</h3>
+            <h3>Ganesh Aher</h3>
            <h3>  <a href="tel:7558640523">(+91)7558640523</a> </h3>
+        
           </div>
         </div>
 
