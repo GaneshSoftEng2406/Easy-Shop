@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/">
-        <img src="https://play-lh.googleusercontent.com/LxBsjxy8_xFI7IkNsQeKl0RSuegjthKA8Mmmme9rTGiS_9zkJahznLB2jTr7pYKC_f8"
+        <img src="./images/logo.png"
          alt="logo" 
          className="logo" />
       </NavLink>
