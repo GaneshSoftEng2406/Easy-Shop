@@ -96,6 +96,7 @@ const Nav = () => {
           font-size: 4.2rem;
           color: ${({ theme }) => theme.colors.black};
         }
+        
       }
 
       .active .mobile-nav-icon {
@@ -165,6 +166,10 @@ const Nav = () => {
         padding: 0.8rem 1.4rem;
       }
     }
+    .logImg{
+          height: 40%;
+          width: 40%;
+        }
   `;
 
   return (
@@ -209,7 +214,9 @@ const Nav = () => {
               isAuthenticated && (
                 <li>
               
-                <img src={user.picture} alt={user.name}/>
+                <img className="logImg"
+                src={user.picture} 
+                alt={user.name}/>
                 
                 <p>{user.name}</p>
                 </li>
