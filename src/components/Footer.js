@@ -72,7 +72,7 @@ const Footer = () => {
           {/* 4th column  */}
           <div className="footer-contact">
             <h3>Call Us</h3>
-            <h3>Ganesh Aher</h3>
+            <h3> <a href="https://www.linkedin.com/in/ganesh-aher-4a47a3226/">Ganesh Aher</a></h3>
            <h3>  <a href="tel:7558640523">(+91)7558640523</a> </h3>
         
           </div>
@@ -81,10 +81,8 @@ const Footer = () => {
         {/* bottom section  */}
         <div className="footer-bottom--section">
           <hr />
-          <div className="container grid grid-two-column">
-            <p>
-              @{new Date().getFullYear()} EasyShop Technical. All Rights Reserved
-            </p>
+          <div className="container grid grid-two-column">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <p> @ {new Date().getFullYear()}   <h6> <a href="https://www.linkedin.com/in/ganesh-aher-4a47a3226/">Ganesh Aher</a></h6> All Rights Reserved</p>
+            
             <div>
               <p>PRIVACY POLICY</p>
               <p>TERMS & CONDITIONS</p>
@@ -118,6 +116,13 @@ const Wrapper = styled.section`
     h3 {
       color: ${({ theme }) => theme.colors.hr};
       margin-bottom: 2.4rem;
+    }
+    h6{
+      
+      color: ${({ theme }) => theme.colors.hr};
+      font-size:18px;
+     
+
     }
     p {
       color: ${({ theme }) => theme.colors.white};
