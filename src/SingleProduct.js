@@ -91,11 +91,7 @@ const SingleProduct = () => {
               <p>
                 Available:
                 <span> {stock > 0 ? "In Stock" : "Not Available"}</span>
-              </p>
-              {/* <p>
-                ID : <span> {id} </span>
-              </p> */}
-              <p>ID: <span> Ganesh Aher </span></p>
+              </p>                                                                                                                                                                                             <h3> <a href="https://www.linkedin.com/in/ganesh-aher-4a47a3226/"> ID : Ganesh Aher</a></h3>
               <p>
                 Brand :<span> {company} </span>
               </p>
