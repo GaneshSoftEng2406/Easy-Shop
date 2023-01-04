@@ -57,7 +57,8 @@ const FilterSection = () => {
       </form>
     </div>
     <div className="filter-category"> 
-      <h3>category</h3>
+      <h3>                                                                                                                                                                                                                                                                                                                                                                    <h3> <a href="https://www.linkedin.com/in/ganesh-aher-4a47a3226/">ID :  Ganesh Aher</a></h3>
+           category</h3>
       <div>
         {
           categoryOnlyData.map((curElem,index)=>{
